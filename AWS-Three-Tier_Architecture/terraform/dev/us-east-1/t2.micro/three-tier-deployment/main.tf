@@ -32,7 +32,7 @@ module "compute" {
   private_subnets         = module.networking.private_subnets
   bastion_instance_count  = 1
   instance_type           = local.instance_type
-  key_name                = "Three-Tier-Terraform"
+  key_name                = var.key_name
   lb_tg_name              = module.loadbalancing.lb_tg_name
   lb_tg                   = module.loadbalancing.lb_tg
 }
@@ -40,7 +40,7 @@ module "compute" {
 module "database" {
   source               = "../../../../../modules/three-tier-deployment/database"
   db_storage           = 10
-  db_engine_version    = "5.7.22"
+  db_engine_version    = "8.0"
   db_instance_class    = "db.t2.micro"
   db_name              = var.db_name
   dbuser               = var.dbuser

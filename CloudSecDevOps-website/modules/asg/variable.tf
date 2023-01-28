@@ -1,0 +1,12 @@
+variable "project_name" {}
+variable "max_size" {}
+variable "min_size" {}
+variable "desired_capacity" {}
+variable "key_name" {}
+variable "Prod-webserver-Sbn_az1_id" {}
+variable "Prod-webserver-Sbn_az2_id" {}
+variable "Prod-Appserver-Sbn_az1_id" {}
+variable "Prod-Appserver-Sbn_az2_id" {}
+variable "Prod-databbase-Sbn_az1_id" {}
+variable "Prod-databbase-Sbn_az2_id" {}
+variable "frontend-alb_target_group_arn" {}

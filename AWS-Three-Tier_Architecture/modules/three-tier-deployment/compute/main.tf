@@ -53,7 +53,7 @@ resource "aws_launch_template" "three_tier_app" {
 
 data "aws_lb_target_group" "three_tier_tg" {
   name = var.lb_tg_name
-}
+ }
 
 resource "aws_autoscaling_group" "three_tier_app" {
   name                = "three_tier_app"
